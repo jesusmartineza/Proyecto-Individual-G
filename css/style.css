@@ -1,0 +1,83 @@
+:root {
+    /* Colores por definir */
+    --primario: #1b0317;
+    --secundario: #535353;
+    --comple1: #7b1b74;
+    --comple2: #86d41a;
+    --comple3: ;
+    --comple4: ;
+    --comple5: ;
+}
+
+/**globales de html y body*/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /*ayuda a mejorar el box model*/
+    scroll-snap-type: y mandatory;
+}
+
+/*scroll-snap*/
+
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    /*1rem=10px*/
+    font-family: "Krub", sans-serif;
+}
+
+/* Animacion de texto */
+
+.titulo .typed {
+    color: var(--comple2);
+    transition: all 0.3s ease;
+}
+
+.titulo {
+    color: antiquewhite;
+}
+
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-video {
+        width: auto;
+        height: 100%;
+    }
+}
