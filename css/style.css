@@ -1,10 +1,10 @@
 :root {
     /* Colores por definir */
-    --primario: #1b0317;
-    --secundario: #535353;
-    --comple1: #7b1b74;
-    --comple2: #86d41a;
-    --comple3: ;
+    --primario: #1b0317; /* en rgb 27, 3, 23 */
+    --secundario: #535353; /* en rgb 83, 83, 83 */
+    --comple1: #7b1b74; /* en rgb 123, 27, 116 */
+    --comple2: #86d41a; /* en rgb 134, 212, 26 */
+    --comple3: #fff;
     --comple4: ;
     --comple5: ;
 }
@@ -15,16 +15,6 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     /*ayuda a mejorar el box model*/
-    scroll-snap-type: y mandatory;
-}
-
-/*scroll-snap*/
-
-.servicios,
-.navegacion-principal,
-.formulario {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }
 
 *,
@@ -34,9 +24,21 @@ html {
 }
 
 body {
-    font-size: 16px;
+    font-size: 1.6rem;
     /*1rem=10px*/
-    font-family: "Krub", sans-serif;
+    font-family: "Nunito", sans-serif;
+    background-image: url(../img/particulas-espacio.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--comple2);
+    padding: 6rem 2rem 1rem 0;
 }
 
 /* Animacion de texto */
@@ -46,38 +48,161 @@ body {
     transition: all 0.3s ease;
 }
 
-.titulo {
-    color: antiquewhite;
-}
+/* pagina inicio */
 
-.fullscreen-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-}
-
-.fullscreen-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+.nav-bg {
     width: 100%;
-    height: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: var(--secundario);
+    margin-bottom: 6rem;
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .fullscreen-video {
-        width: 100%;
-        height: auto;
-    }
+.nav-bg a {
+    color: var(--comple2);
+    text-decoration: none;
+    font-weight: 700;
 }
 
-@media (max-aspect-ratio: 16/9) {
-    .fullscreen-video {
-        width: auto;
-        height: 100%;
-    }
+.navegacion a:hover {
+    color: var(--primario);
+    background-color: var(--comple2);
+    padding: 13px 2px 13px 2px;
+    margin: 0;
+    border-radius: 2px;
+}
+
+.logo {
+    color: var(--primario);
+    border: 2px solid var(--primario);
+    padding: 2px;
+}
+
+.navegacion {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+/* pagina sobre mi */
+
+.about {
+    width: 100%;
+    height: 470px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about p {
+    color: var(--comple2);
+    font-weight: 700;
+}
+.about p:hover {
+    color: var(--comple1);
+    cursor: pointer;
+}
+
+.imagen-about img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 2rem;
+}
+
+.text-p {
+    background-color: rgba(83, 83, 83, 0.6);
+    box-shadow: 8px 8px 3px 1px var(--comple2);
+    border: 2px solid var(--comple2);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 35rem;
+    height: 19rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.imagen-about {
+    border: 2px solid var(--comple2);
+    box-shadow: 8px 8px 3px 1px var(--comple2);
+    border-radius: 2rem;
+}
+
+.skills {
+    border: 2px solid var(--comple2);
+    background-color: rgba(83, 83, 83, 0.6);
+    box-shadow: 8px 8px 3px 1px var(--comple2);
+    border-radius: 2rem;
+    color: #fff;
+    width: 30rem;
+    height: 40rem;
+}
+
+.skills-icono {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* pagina servicios */
+
+.servicios {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.servicios img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.servicios p {
+    color: var(--comple2);
+    font-weight: 700;
+    text-align: center;
+}
+
+.servicio img {
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio {
+    border: 2px solid var(--primario);
+    background-color: rgba(83, 83, 83, 0.6);
+    width: 30rem;
+    height: 25rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
