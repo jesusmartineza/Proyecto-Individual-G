@@ -1,21 +1,24 @@
-// escribiendo texto animacion con la libreria "typed"
-var typed = new Typed(".typed", {
-    strings: [
-        '<i class="mascota">Developer</i>',
-        '<i class="mascota">Web</i>',
-        '<i class="mascota">Mobil</i>',
-        '<i class="mascota">Freelancer</i>',
-    ],
-    //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
-    typeSpeed: 100, // Velocidad en milsegundos para poner una letra,
-    startDelay: 300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
-    backSpeed: 60, // Velocidad en milisegundos para borrrar una letra,
-    smartBackspace: true, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
-    shuffle: false, // Alterar el orden en el que escribe las palabras.
-    backDelay: 1000, // Tiempo de espera despues de que termina de escribir una palabra.
-    loop: true, // Repetir el array de strings
-    loopCount: false, // Cantidad de veces a repetir el array.  false = infinite
-    showCursor: true, // Mostrar cursor palpitanto
-    //cursorChar: '|', // Caracter para el cursor
-    contentType: "html", // 'html' o 'null' para texto sin formato
+import { API } from './api.js';
+import * as UI from './interfaz.js';
+
+UI.formularioBuscar.addEventListener('submit', (e) => {
+     e.preventDefault();
+
+     // Obtener datos del formulario
+     const artista = document.querySelector('#artista').value,
+           cancion = document.querySelector('#cancion').value;
+
+     if(artista === '' || cancion === '') {
+          // El usuario deja los campos vacios, mostrar error
+          UI.divMensajes.innerHTML = 'Error... Todos los campos son obligatorios';
+          UI.divMensajes.classList.add('error');
+          setTimeout(() => {
+               UI.divMensajes.innerHTML = '';
+               UI.divMensajes.classList.remove('error');
+          }, 3000);
+     } else {
+          // El formulario esta completo, realizar consulta a la API
+          new API(artista, cancion);
+     }
+
 });

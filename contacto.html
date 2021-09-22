@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Portafolio Jesus Martinez</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
@@ -13,29 +15,62 @@
 </head>
 
 <body>
-    <div class="nav-bg">
-        <nav class="navegacion">
-            <a href="index.html">Inicio</a>
-            <a href="sobremi.html">Sobre mi</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="portafolio.html">Portafolio</a>
-            <a href="testimoniales.html">Testimoniales</a>
-            <a href="contacto.html">Contacto</a>
+    <div class="navegacion py-2">
+        <nav class="nav-principal navbar navbar-expand-md navbar-light bg-faded">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal"
+                aria-label="Mostrar Navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="#" class="navbar-brand d-lg-none">Menu</a>
+            <div class="container">
+                <div class="collapse navbar-collapse w-100" id="nav-principal">
+                    <ul class="nav nav-justified w-100 flex-column flex-sm-row">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sobremi.html" class="nav-link">Sobre mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="servicios.html" class="nav-link">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="portafolio.html" class="nav-link">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="testimoniales.html" class="nav-link">Testimoniales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div><!-- accion del menu en responsive -->
+            </div><!-- Termino del contenedor -->
         </nav>
-        <!-- Termina la nevagacion -->
     </div>
-    <section>
-        <div>
-            <a href="#">git</a>
-            <a href="#">twitter</a>
-            <a href="#">instagram</a>
-            <a href="#">facebook</a>
-            <a href="#">whatsapp</a>
+    <section class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <a class="col " href="https://github.com/jesusmartineza">
+                <img src="img/icon/github.ico" alt="github">
+            </a>
+            <a class="col " href="https://twitter.com/Jesus_Mtz_Ayala">
+                <img src="img/icon/twitter.ico" alt="twitter">
+            </a>
+            <a class="col" href="https://www.instagram.com/jesusmartinez_sky/">
+                <img src="img/icon/instagram.ico" alt="instagram">
+            </a>
+            <a class="col" href="https://www.facebook.com/SKYLINE99MX/">
+                <img src="img/icon/facebook.ico" alt="facebook">
+            </a>
+            <a class="col" href="https://www.linkedin.com/in/jesus-martinez-0730b0108/">
+                <img src="img/icon/linkedin.ico" alt="Linkedin">
+            </a>
         </div>
         <!-- mis redes sociales para ver mi trabajo y alguna manera ser contactado -->
     </section>
     <section>
-        <form method="POST">
+        <h2 class="contenedor">Contacto</h2>
+        <form method="POST" class="formulario">
             <fieldset>
                 <legend>ingrese sus datos</legend>
                 <div class="contenedor-campos">
@@ -59,7 +94,7 @@
                         <textarea class="input-text" placeholder="Ingresa un mensaje"></textarea>
                     </div>
                     <div>
-                        <label>Horario en que se le pueda contactar</label>
+                        <label class="horario">Horario en que se le pueda contactar</label>
                         <select>
                             <option>9am</option>
                             <option>11am</option>
@@ -68,7 +103,6 @@
                         </select>
                     </div>
                 </div>
-
                 <div class="enviar">
                     <input class="btn" type="submit" value="Enviar">
                 </div>
@@ -78,10 +112,16 @@
     </section>
 
     <!-- termina el contenido principal de contacto -->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <p>Todos los derechos reservados. Jesus Martinez Freelancer</p>
-    </footer>
-
+    </footer> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
 </body>
 
 </html>

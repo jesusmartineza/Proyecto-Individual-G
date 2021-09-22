@@ -5,7 +5,7 @@
     --comple1: #7b1b74; /* en rgb 123, 27, 116 */
     --comple2: #86d41a; /* en rgb 134, 212, 26 */
     --comple3: #fff;
-    --comple4: ;
+    --comple4: #000;
     --comple5: ;
 }
 
@@ -30,16 +30,17 @@ body {
     background-image: url(../img/particulas-espacio.gif);
     background-repeat: no-repeat;
     background-size: cover;
+    width: auto;
+    /* height: 150rem; */
 }
 
-.footer {
+/* .footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     color: var(--comple2);
-    padding: 6rem 2rem 1rem 0;
-}
+} */
 
 /* Animacion de texto */
 
@@ -50,57 +51,56 @@ body {
 
 /* pagina inicio */
 
-.nav-bg {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    background-color: var(--secundario);
-    margin-bottom: 6rem;
-}
-
-.nav-bg a {
-    color: var(--comple2);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.navegacion a:hover {
-    color: var(--primario);
-    background-color: var(--comple2);
-    padding: 13px 2px 13px 2px;
-    margin: 0;
-    border-radius: 2px;
-}
-
-.logo {
-    color: var(--primario);
-    border: 2px solid var(--primario);
-    padding: 2px;
-}
-
 .navegacion {
-    display: flex;
-    font-size: 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 12rem;
-    margin: 0;
+    background-color: var(--secundario);
+}
+
+.navbar-light .navbar-toggler {
+    background-color: var(--comple3);
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+    color: var(--comple3);
+}
+
+.navegacion a {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: var(--comple2);
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: var(--comple2);
+    color: var(--secundario);
 }
 
 .header {
     width: 100%;
-    height: 500px;
+    height: 300px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: wrap nowrap;
     justify-content: center;
     align-items: center;
 }
 
+@media (min-width: 768px) {
+    .header {
+        height: 600px;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+    }
+}
+
 .titulo {
-    color: #fff;
-    font-size: 6rem;
+    color: var(--comple3);
+    font-size: 4rem;
     font-weight: 700;
 }
 
@@ -109,7 +109,7 @@ body {
 .about {
     width: 100%;
     height: 470px;
-    margin: 0 auto;
+    margin-top: 10rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -126,8 +126,8 @@ body {
 }
 
 .imagen-about img {
-    width: 25rem;
-    height: 25rem;
+    width: 30rem;
+    height: 40rem;
     border-radius: 2rem;
 }
 
@@ -140,8 +140,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: justify;
-    width: 35rem;
-    height: 19rem;
+    width: 30rem;
+    height: 40rem;
     padding: 2rem;
     border-radius: 2rem;
 }
@@ -205,4 +205,154 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+}
+
+/* Estilo boton de la api */
+
+.btn {
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    width: 30%;
+    text-align: center;
+    border: none;
+}
+
+/* carusel en JS */
+
+.carusel__contenedor {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.carusel__anterior,
+.carusel__siguiente {
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 120px;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgba(83, 83, 83, 0.6);
+    color: var(--comple2);
+    border: none;
+}
+
+.carusel__anterior {
+    margin-left: 35rem;
+}
+
+.carusel__siguiente {
+    right: 35rem;
+}
+
+@media (min-width: 480px) {
+    .carusel__anterior,
+    .carusel__siguiente {
+        overflow: hidden;
+    }
+}
+
+.carusel__elemento img {
+    width: 100%;
+    height: 35rem;
+}
+
+.carusel__lista {
+    width: 30rem;
+    height: 60rem;
+    overflow: hidden;
+}
+
+.carusel__indicadores {
+    margin-top: -10rem;
+}
+/* Pagina formulario */
+
+.contenedor {
+    color: var(--comple3);
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.formulario {
+    background-color: rgba(83, 83, 83, 0.6);
+    width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--comple4);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--comple4);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 10rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.enviar .btn {
+    background-color: var(--comple4);
+    color: var(--comple3);
+}
+
+.enviar .btn:hover {
+    background-color: var(--comple2);
+    color: var(--primario);
+}
+
+.horario {
+    color: var(--comple4);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.btn {
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    font-size: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    width: 30%;
+    text-align: center;
+    border: none;
 }
