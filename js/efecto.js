@@ -3,7 +3,7 @@ var typed = new Typed(".typed", {
     strings: [
         '<i class="mascota">Developer</i>',
         '<i class="mascota">Web</i>',
-        '<i class="mascota">Mobil</i>',
+        '<i class="mascota">Mobile</i>',
         '<i class="mascota">Freelancer</i>',
     ],
     //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
