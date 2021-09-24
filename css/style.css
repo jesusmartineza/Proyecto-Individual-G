@@ -197,7 +197,7 @@ body {
     font-size: 1.8rem;
 }
 
-/* Estilo boton de la api */
+/* Estilo boton de la api y descarga*/
 
 .boton__btn {
     padding: 1rem 1rem;
@@ -207,7 +207,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 0.5rem;
-    width: 35%;
+    width: 80%;
     text-align: center;
     border: none;
 }
