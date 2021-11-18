@@ -321,7 +321,21 @@ body {
     text-align: justify;
 }
 
+.btn-primary{
+    color: var(--comple4);
+    background-color: var(--comple2);
+}
+
+.btn-primary:hover {
+    background-color: var(--primario);
+    color: var(--comple3);
+}
+
 /* Pagina formulario */
+
+.centro__redes{
+    margin-top: 28rem;
+}
 
 .contenedor {
     color: var(--comple3);
