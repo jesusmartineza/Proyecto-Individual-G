@@ -297,11 +297,12 @@ body {
 
 .portafolio .card-body {
     max-width: 120rem;
-    height: 26rem;
+    height: 30rem;
 }
 
 .card {
     background-color: rgba(83, 83, 83, 0.8);
+    padding: 1.5rem;
 }
 
 .card-body a {
